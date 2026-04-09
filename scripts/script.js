@@ -34,10 +34,14 @@ const arrayBici = [
 // poi devo confrontare i pesi delle bici e mostrare quella più leggera
 // per confrontarli posso prendere solo la proprietà del peso
 // pushare questa proprietà dentro un oggetto vuoto
-let pesoBiciMin = [];
+let pesoBiciMin = arrayBici[0];
 
-for (const bici of arrayBici) {
-    pesoBiciMin.push(bici.peso);
+for (let z = 0; z < arrayBici.length; z++) { // scorre l'array
+    if (arrayBici[z].peso < pesoBiciMin.peso) { // confronta il peso della bici nella posizione dell'array [z] con la prima bici dell'array
+        pesoBiciMin = arrayBici[z]; // ogni volta la bici che pesa meno viene assegnata alla variabile pesoBiciMin e viene rifatto il confronto
+    }    
 }
+console.log(pesoBiciMin);
+
 // oppure
 // creare una funzione che confronta la più leggera con un min e un max
