@@ -1,5 +1,8 @@
 'use strict';
 
+const bottoneConfrontaBici = document.querySelector('#confrontaBici');
+const mostraBici = document.querySelector('#mostraBiciConfronto');
+
 const arrayBici = [
     {
         nomeBici: 'BlastBike-400',
@@ -27,3 +30,14 @@ const arrayBici = [
     }
 ];
 
+// creo un ciclo for per scorrere gli oggetti all'interno dell'arrray
+// poi devo confrontare i pesi delle bici e mostrare quella più leggera
+// per confrontarli posso prendere solo la proprietà del peso
+// pushare questa proprietà dentro un oggetto vuoto
+let pesoBiciMin = [];
+
+for (const bici of arrayBici) {
+    pesoBiciMin.push(bici.peso);
+}
+// oppure
+// creare una funzione che confronta la più leggera con un min e un max
