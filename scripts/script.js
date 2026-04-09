@@ -1,7 +1,6 @@
 'use strict';
 
 const bottoneConfrontaBici = document.querySelector('#confrontaBici');
-const mostraBici = document.querySelector('#mostraBiciConfronto');
 
 const arrayBici = [
     {
@@ -45,3 +44,13 @@ console.log(pesoBiciMin);
 
 // oppure
 // creare una funzione che confronta la più leggera con un min e un max
+
+function mostraBiciLeggera () {
+    const mostraBici = document.querySelector('#mostraBiciConfronto');
+
+    mostraBici.textContent = `LA BICI PIù LEGGERA DI TUTTE è: ${pesoBiciMin.nomeBici}
+    CON PESO: ${pesoBiciMin.peso}KG`
+
+}
+
+bottoneConfrontaBici.addEventListener('click', mostraBiciLeggera)
