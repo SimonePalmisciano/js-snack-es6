@@ -34,8 +34,17 @@ const arraySquadreCalcio = [
 ];
 
 // scorrere l'array un oggetto alla volta
+let squadres = [];
 
-for (const squadre of arraySquadreCalcio) {
-    console.log(squadre);
+for (let z = 0; z < arraySquadreCalcio.length; z++) {
+    const element = arraySquadreCalcio[z];
+    const generaNumeriCasualiPunti = Math.floor(Math.random()* 120 + 1);
+    const generaNumeriCasualiFalli = Math.floor(Math.random()* 50 + 1);
+
+    element.puntiFatti = generaNumeriCasualiPunti;
+    element.falliSubiti = generaNumeriCasualiFalli;
+
+    squadres.push(element);
+    
 }
-
+console.log(squadres);
